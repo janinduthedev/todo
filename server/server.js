@@ -3,6 +3,8 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cors from 'cors'
 
+import todoRoutes from './routes/todoRoutes.js'
+
 // Load environment variables from .env file
 dotenv.config();
 
@@ -11,6 +13,9 @@ import connectDB from '../server/config/db.js'
 connectDB();
 
 const app = express();
+
+//Middleware
+app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
@@ -22,3 +27,5 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
     res.send("APT is running");
 });
+
+app.use("/api/todos", todoRoutes);
