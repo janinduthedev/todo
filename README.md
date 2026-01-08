@@ -33,5 +33,4 @@ Perfect for beginners learning full-stack development.
 
 1️⃣ Clone the repository
 
-git clone https://github.com/janinduthedev/todo.git
-cd todo
+git clone https://github.com/janinduthedev/todo.git & cd todo
